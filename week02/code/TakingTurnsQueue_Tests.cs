@@ -4,6 +4,16 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 // DO NOT MODIFY THE CODE IN THE TESTS in this file, just the comments above the tests. 
 // Fix the code being tested to match requirements and make all tests pass. 
 
+// Defect(s) Found:
+// The queue returns the wrong person. The expected queue order is incorrect,
+// causing Sue to be returned when Bob should be returned.
+// The expected name is Bob and actual is Sue
+
+// Defect(s) Found:
+// Players with negative (infinite) turns are not being re-added
+// correctly or the queue order becomes incorrect.
+// Expected name is Tim and actual is Sue
+
 [TestClass]
 public class TakingTurnsQueueTests
 {
